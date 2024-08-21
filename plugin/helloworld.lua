@@ -3,5 +3,11 @@ local function hello_world()
 	print("hello world") -- 使用 Neovim 的 print 函数输出信息
 end
 
+local function good()
+	print("good")
+end
+
 -- 使用 Neovim 的 api 创建一个用户命令 'Hikaru'，当调用时执行 hello_world 函数
 vim.api.nvim_create_user_command("Hikaru", hello_world, {})
+
+vim.api.nvim_create_user_command("Good", good, {})
